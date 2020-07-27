@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  name = 'Fred';
+  name = 'Fred_old';
 
   async ngOnInit(): Promise<void> {
     this.name = await (await fetch(`/api/name`)).json();
-
+    document.querySelector('#name').textContent = this.name;
     console.log(this.name);
 
   }
