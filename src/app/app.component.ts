@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.name = await (await fetch(`/api/name`)).json();
+
+    console.log(this.name);
+
   }
 
 }
