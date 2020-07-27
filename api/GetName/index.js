@@ -9,7 +9,7 @@ module.exports = async function (context, req) {
     }
     else {
         context.res = {
-            body: { name: "Alfred"}
+            body: { name: "Fred"}
         };
     }
 };
