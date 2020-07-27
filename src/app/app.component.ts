@@ -10,9 +10,9 @@ export class AppComponent implements OnInit {
   name = 'Fred_old';
 
   async ngOnInit(): Promise<void> {
-    this.name = await (await fetch(`/api/name`)).json();
-    document.querySelector('#name').textContent = this.name;
-    console.log(this.name);
+    const { name } = await (await fetch(`/api/name`)).json();
+    document.querySelector('#name').textContent = name;
+    this.name = name;
 
   }
 
