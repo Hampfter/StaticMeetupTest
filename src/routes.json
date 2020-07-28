@@ -5,17 +5,13 @@
       "allowedRoles": [
         "authenticated"
       ]
-    },
-    {
-      "route": "/login",
-      "serve": "/.auth/login/google"
     }
   ],
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
       "statusCode": "302",
-      "serve": "/login"
+      "serve": "/.auth/login/google"
     }
   ]
 }
